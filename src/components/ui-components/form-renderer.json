@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_ui_components_form_renderers",
+  "info": {
+    "displayName": "formRenderer",
+    "icon": "layout"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_form_emails",
+  "info": {
+    "displayName": "email",
+    "icon": "envelop"
+  },
+  "options": {},
+  "attributes": {
+    "field_name": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::field-name.field-name"
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "hint": {
+      "type": "string"
+    },
+    "required": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}

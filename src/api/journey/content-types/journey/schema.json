@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "journeys",
+  "info": {
+    "singularName": "journey",
+    "pluralName": "journeys",
+    "displayName": "Journey"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "pages": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::page.page",
+      "inversedBy": "journeys"
+    }
+  }
+}

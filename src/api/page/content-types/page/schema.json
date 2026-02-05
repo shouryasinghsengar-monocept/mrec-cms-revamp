@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "journeys": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::journey.journey",
+      "mappedBy": "pages"
+    },
+    "steps": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::step.step",
+      "inversedBy": "pages"
+    },
+    "uiComponents": {
+      "type": "dynamiczone",
+      "components": [
+        "ui-components.form-renderer"
+      ]
+    }
+  }
+}

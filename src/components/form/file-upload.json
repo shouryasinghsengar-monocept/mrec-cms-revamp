@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_form_file_uploads",
+  "info": {
+    "displayName": "fileUpload",
+    "icon": "attachment"
+  },
+  "options": {},
+  "attributes": {
+    "field_name": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::field-name.field-name"
+    },
+    "hint": {
+      "type": "string"
+    },
+    "required": {
+      "type": "boolean"
+    },
+    "label": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

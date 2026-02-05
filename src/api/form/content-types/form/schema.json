@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "forms",
+  "info": {
+    "singularName": "form",
+    "pluralName": "forms",
+    "displayName": "Form"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "steps": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::step.step",
+      "inversedBy": "forms"
+    },
+    "fields": {
+      "type": "dynamiczone",
+      "components": [
+        "form.mobile",
+        "form.input",
+        "form.file-upload",
+        "form.email",
+        "form.dropdown",
+        "form.array-form",
+        "form.date-input"
+      ]
+    }
+  }
+}

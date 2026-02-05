@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_form_array_forms",
+  "info": {
+    "displayName": "arrayForm",
+    "icon": "plus"
+  },
+  "options": {},
+  "attributes": {
+    "field_name": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::field-name.field-name"
+    },
+    "form": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::form.form"
+    },
+    "minItems": {
+      "type": "integer"
+    },
+    "maxItems": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}

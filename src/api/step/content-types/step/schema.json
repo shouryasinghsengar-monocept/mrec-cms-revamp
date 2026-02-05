@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "steps",
+  "info": {
+    "singularName": "step",
+    "pluralName": "steps",
+    "displayName": "Step"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "pages": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::page.page",
+      "mappedBy": "steps"
+    },
+    "forms": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::form.form",
+      "mappedBy": "steps"
+    }
+  }
+}

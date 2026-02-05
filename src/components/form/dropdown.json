@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_form_dropdowns",
+  "info": {
+    "displayName": "dropdown",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "field_name": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::field-name.field-name"
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "hint": {
+      "type": "string"
+    },
+    "required": {
+      "type": "boolean"
+    },
+    "data_source": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::data-source.data-source"
+    }
+  },
+  "config": {}
+}
