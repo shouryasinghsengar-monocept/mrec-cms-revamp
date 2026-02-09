@@ -22,6 +22,11 @@
     },
     "required": {
       "type": "boolean"
+    },
+    "disabled": {
+      "type": "boolean",
+      "required": false,
+      "default": false
     }
   },
   "config": {}

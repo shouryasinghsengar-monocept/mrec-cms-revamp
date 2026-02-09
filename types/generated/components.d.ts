@@ -99,6 +99,7 @@ export interface FormInput extends Struct.ComponentSchema {
     icon: 'pencil';
   };
   attributes: {
+    disabled: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     field_name: Schema.Attribute.Relation<
       'oneToOne',
       'api::field-name.field-name'
