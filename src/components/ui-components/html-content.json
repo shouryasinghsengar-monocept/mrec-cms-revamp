@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_ui_components_html_contents",
+  "info": {
+    "displayName": "htmlContent",
+    "icon": "code"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "textContent": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

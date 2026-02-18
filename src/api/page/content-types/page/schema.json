@@ -30,12 +30,6 @@
       "relation": "manyToMany",
       "target": "api::step.step",
       "inversedBy": "pages"
-    },
-    "uiComponents": {
-      "type": "dynamiczone",
-      "components": [
-        "ui-components.form-renderer"
-      ]
     }
   }
 }

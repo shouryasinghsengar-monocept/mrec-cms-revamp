@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_form_text_areas",
+  "info": {
+    "displayName": "textArea",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "className": {
+      "type": "text",
+      "required": true
+    },
+    "type": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

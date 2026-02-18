@@ -36,6 +36,13 @@
         "form.array-form",
         "form.date-input"
       ]
+    },
+    "uiComponents": {
+      "type": "dynamiczone",
+      "components": [
+        "ui-components.form-renderer",
+        "ui-components.image"
+      ]
     }
   }
 }

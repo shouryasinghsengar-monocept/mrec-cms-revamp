@@ -15,18 +15,32 @@
       "type": "string"
     },
     "label": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "hint": {
       "type": "string"
     },
     "required": {
-      "type": "boolean"
+      "type": "boolean",
+      "required": true,
+      "default": true
     },
     "disabled": {
       "type": "boolean",
-      "required": false,
+      "required": true,
       "default": false
+    },
+    "type": {
+      "type": "string",
+      "default": "text",
+      "required": true
+    },
+    "maxLength": {
+      "type": "integer"
+    },
+    "minLength": {
+      "type": "integer"
     }
   },
   "config": {}

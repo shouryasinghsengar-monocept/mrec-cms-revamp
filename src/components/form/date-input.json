@@ -15,13 +15,56 @@
       "type": "string"
     },
     "label": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "hint": {
       "type": "string"
     },
     "required": {
-      "type": "boolean"
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "disabled": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "type": {
+      "type": "string",
+      "default": "simple",
+      "required": true
+    },
+    "minYear": {
+      "type": "biginteger",
+      "required": true,
+      "default": "1926"
+    },
+    "maxYear": {
+      "type": "biginteger",
+      "required": true,
+      "default": "2040"
+    },
+    "variant": {
+      "type": "string",
+      "default": "default",
+      "required": true
+    },
+    "closeIcon": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "showHeader": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "showFooterBtns": {
+      "type": "boolean",
+      "required": true,
+      "default": true
     }
   },
   "config": {}

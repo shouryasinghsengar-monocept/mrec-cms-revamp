@@ -15,10 +15,42 @@
       "type": "string"
     },
     "required": {
-      "type": "boolean"
+      "type": "boolean",
+      "required": true,
+      "default": true
     },
     "label": {
-      "type": "string"
+      "type": "string",
+      "default": "Label",
+      "required": true
+    },
+    "disabled": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "state": {
+      "type": "string",
+      "default": "default",
+      "required": true
+    },
+    "allowedFileSize": {
+      "type": "integer",
+      "required": true,
+      "default": 1
+    },
+    "fileFormat": {
+      "type": "text",
+      "default": "application/pdf,image/jpeg,image/png,image/heic,image/heif",
+      "required": true
+    },
+    "fileNumberLimit": {
+      "type": "integer",
+      "required": true,
+      "default": 1
     }
   },
   "config": {}

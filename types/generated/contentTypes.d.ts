@@ -524,6 +524,9 @@ export interface ApiFormForm extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     steps: Schema.Attribute.Relation<'manyToMany', 'api::step.step'>;
     title: Schema.Attribute.String;
+    uiComponents: Schema.Attribute.DynamicZone<
+      ['ui-components.form-renderer', 'ui-components.image']
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -586,7 +589,6 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
       Schema.Attribute.Unique;
     steps: Schema.Attribute.Relation<'manyToMany', 'api::step.step'>;
     title: Schema.Attribute.String;
-    uiComponents: Schema.Attribute.DynamicZone<['ui-components.form-renderer']>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
