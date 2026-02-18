@@ -1,8 +1,7 @@
 {
-  "collectionName": "components_form_dropdowns",
+  "collectionName": "components_form_radios",
   "info": {
-    "displayName": "dropdown",
-    "icon": "bulletList"
+    "displayName": "radio"
   },
   "options": {},
   "attributes": {
@@ -11,30 +10,40 @@
       "relation": "oneToOne",
       "target": "api::field-name.field-name"
     },
-    "placeholder": {
-      "type": "string"
-    },
-    "label": {
-      "type": "string",
-      "required": true
-    },
-    "hint": {
-      "type": "string"
-    },
     "required": {
       "type": "boolean",
       "required": true,
       "default": true
     },
-    "data_source": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::data-source.data-source"
-    },
     "disabled": {
       "type": "boolean",
       "required": true,
       "default": false
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "hint": {
+      "type": "text"
+    },
+    "size": {
+      "type": "string",
+      "default": "small",
+      "required": true
+    },
+    "showRadioButton": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "data_source": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::data-source.data-source"
     }
   },
   "config": {}

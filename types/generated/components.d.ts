@@ -72,14 +72,19 @@ export interface FormDropdown extends Struct.ComponentSchema {
       'oneToOne',
       'api::data-source.data-source'
     >;
+    disabled: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
     field_name: Schema.Attribute.Relation<
       'oneToOne',
       'api::field-name.field-name'
     >;
     hint: Schema.Attribute.String;
-    label: Schema.Attribute.String;
+    label: Schema.Attribute.String & Schema.Attribute.Required;
     placeholder: Schema.Attribute.String;
-    required: Schema.Attribute.Boolean;
+    required: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<true>;
   };
 }
 
@@ -90,14 +95,22 @@ export interface FormEmail extends Struct.ComponentSchema {
     icon: 'envelop';
   };
   attributes: {
+    disabled: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
     field_name: Schema.Attribute.Relation<
       'oneToOne',
       'api::field-name.field-name'
     >;
     hint: Schema.Attribute.String;
-    label: Schema.Attribute.String;
+    label: Schema.Attribute.String & Schema.Attribute.Required;
     placeholder: Schema.Attribute.String;
-    required: Schema.Attribute.Boolean;
+    required: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<true>;
+    showVerifyButton: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<true>;
   };
 }
 
@@ -184,6 +197,38 @@ export interface FormMobile extends Struct.ComponentSchema {
   };
 }
 
+export interface FormRadio extends Struct.ComponentSchema {
+  collectionName: 'components_form_radios';
+  info: {
+    displayName: 'radio';
+  };
+  attributes: {
+    data_source: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::data-source.data-source'
+    >;
+    disabled: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    field_name: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::field-name.field-name'
+    >;
+    hint: Schema.Attribute.Text;
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+    placeholder: Schema.Attribute.String;
+    required: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<true>;
+    showRadioButton: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    size: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'small'>;
+  };
+}
+
 export interface FormTextArea extends Struct.ComponentSchema {
   collectionName: 'components_form_text_areas';
   info: {
@@ -247,6 +292,7 @@ declare module '@strapi/strapi' {
       'form.file-upload': FormFileUpload;
       'form.input': FormInput;
       'form.mobile': FormMobile;
+      'form.radio': FormRadio;
       'form.text-area': FormTextArea;
       'ui-components.form-renderer': UiComponentsFormRenderer;
       'ui-components.html-content': UiComponentsHtmlContent;

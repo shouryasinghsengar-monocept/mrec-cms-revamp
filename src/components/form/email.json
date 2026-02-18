@@ -15,13 +15,26 @@
       "type": "string"
     },
     "label": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "hint": {
       "type": "string"
     },
     "required": {
-      "type": "boolean"
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "disabled": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "showVerifyButton": {
+      "type": "boolean",
+      "required": true,
+      "default": true
     }
   },
   "config": {}
